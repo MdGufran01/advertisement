@@ -1,0 +1,270 @@
+/* General Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background-color: #092327;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+/* Header Section */
+header {
+    background-color: #0b5351;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header .container i {
+    font-size: 35px;
+    color: white;
+    float: left;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #00a9a5;
+}
+
+
+.slider {
+    height: 400px;
+    background-color: #00a9a5;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-wrapper {
+    display: flex;
+    animation: slide 12s infinite;
+}
+
+.slider .slide {
+    min-width: 100%;
+}
+
+.slider img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+@keyframes slide {
+    0%, 25% { transform: translateX(0); }
+    33%, 58% { transform: translateX(-100%); }
+    66%, 91% { transform: translateX(-200%); }
+    100% { transform: translateX(-300%); }
+}
+
+section {
+    padding: 60px 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 36px;
+    color: #00a9a5;
+}
+
+.about, .services, .team, .contact {
+    background-color: #0b5351;
+    color: #fff;
+}
+
+.service-items, .team-members {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service-item, .team-member {
+    text-align: center;
+    margin: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover, .team-member:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.service-item img, .team-member img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.contact {
+    background-color: #092327;
+    text-align: center;
+    color: #fff;
+}
+
+.footer {
+    background-color: #092327;
+    text-align: center;
+    padding: 40px 0;
+    color: #fff;
+}
+
+.footer h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #00a9a5;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #0b5351;
+    color: #fff;
+    outline: none;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: none;
+}
+
+.contact-form button {
+    background-color: #00a9a5;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #08958e;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .container i {
+        font-size: 25px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    .slider {
+        height: 300px;
+    }
+
+    .slider img {
+        height: 300px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .service-items, .team-members {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-item img, .team-member img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 8px 0;
+    }
+
+    .slider {
+        height: 250px;
+    }
+
+    .slider img {
+        height: 250px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .service-item img, .team-member img {
+        width: 120px;
+        height: 120px;
+    }
+}
